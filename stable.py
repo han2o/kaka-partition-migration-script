@@ -14,10 +14,10 @@ import commands
 
 
 def check_partition_stat():
-'''online'''
+#'''online'''
 #    cmd = '/usr/local/kafka_2.10-0.8.2.2/bin/kafka-topics.sh --zookeeper %s:2181 --topic %s --describe' % (zookeeper_host, topic)
 #    describe = commands.getoutput(cmd)
-'''file_test'''
+#'''file_test'''
 #    testfile_name = sys.argv[2]
 #    cmd = 'cat %s' % testfile_name
 #    describe = commands.getoutput(cmd)
