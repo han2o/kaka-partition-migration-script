@@ -1,11 +1,6 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
-'''usage:
-file_test:
-python v2.py mapi mapidescribe
-online:
-python v2.py mapi
-'''
+
 
 import re
 import sys
