@@ -21,4 +21,3 @@ Topic:mapi	PartitionCount:22	ReplicationFactor:1	Configs:
 	Topic: mapi	Partition: 19	Leader: 17	Replicas: 17	Isr: 17
 	Topic: mapi	Partition: 20	Leader: 1	Replicas: 1	Isr: 1
 	Topic: mapi	Partition: 21	Leader: 1	Replicas: 1	Isr: 1
-

@@ -59,4 +59,3 @@ Topic:accesslog	PartitionCount:60	ReplicationFactor:1	Configs:
 	Topic: accesslog	Partition: 57	Leader: 1	Replicas: 1	Isr: 1
 	Topic: accesslog	Partition: 58	Leader: 6	Replicas: 6	Isr: 6
 	Topic: accesslog	Partition: 59	Leader: 10	Replicas: 10	Isr: 10
-
