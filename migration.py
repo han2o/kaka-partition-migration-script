@@ -151,9 +151,9 @@ if __name__ == "__main__":
         print '''
 	usage:
 	    file_test:
-	        python v3.py mapi mapidescribe
+	        python migration.py mapi mapidescribe
             online:
-	        python v3.py mapi
+	        python migration.py mapi
 	'''
 
     else:
