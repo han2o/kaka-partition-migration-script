@@ -10,6 +10,6 @@ online:
 >python stable.py mapi
 
 
-improve:
+需要改进的地方:
 
 >维护一个list，这个list保存存活的broker，将partition迁移到这个list有的broker上；
