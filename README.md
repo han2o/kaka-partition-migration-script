@@ -1,5 +1,5 @@
 # kaka-partition-migration-script
-kafka partition迁移脚本
+kafka partition迁移策略脚本
 
 usage:
 
