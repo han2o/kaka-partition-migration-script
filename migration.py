@@ -147,19 +147,29 @@ def write_json_file(partition_replica_assignment):
 
 
 if __name__ == "__main__":
-    current_broker_list = raw_input('last_broker_list:\n1,6,10,11,12,13,14,15,17\n\nenter current_broker_list: ')
-    zookeeper_host = '10.77.121.59'    
-    topic = sys.argv[1]
+    if sys.argv[1] in ['-h', '--help']:
+        print '''
+	usage:
+	    file_test:
+	        python v3.py mapi mapidescribe
+            online:
+	        python v3.py mapi
+	'''
 
-    topic_json_file_name = '/usr/home/yangqi5/topics-to-move-test.json'
-    topic_json_file_text  = '{    "topics": [        {            "topic": "%s"        }    ],    "version": 1}' % topic 
-    with open(topic_json_file_name, 'w') as f:
-        f.write(topic_json_file_text)
-    cmd = '/usr/local/kafka_2.10-0.8.2.2/bin/kafka-reassign-partitions.sh --zookeeper %s:2181 --topics-to-move-json-file %s --broker-list %s --generate' % (zookeeper_host, topic_json_file_name, current_broker_list)
-    generate = commands.getoutput(cmd)
-    generate = generate.split('\n')
-    partition_replica_assignment = eval(generate[2])
+    else:
+        current_broker_list = raw_input('last_broker_list:\n1,6,10,11,12,13,14,15,17\n\nenter current_broker_list: ')
+        zookeeper_host = '10.77.121.59'    
+        topic = sys.argv[1]
 
-    check_partition_stat()
+        topic_json_file_name = '/usr/home/yangqi5/topics-to-move-test.json'
+        topic_json_file_text  = '{    "topics": [        {            "topic": "%s"        }    ],    "version": 1}' % topic 
+        with open(topic_json_file_name, 'w') as f:
+            f.write(topic_json_file_text)
+        cmd = '/usr/local/kafka_2.10-0.8.2.2/bin/kafka-reassign-partitions.sh --zookeeper %s:2181 --topics-to-move-json-file %s --broker-list %s --generate' % (zookeeper_host, topic_json_file_name, current_broker_list)
+        generate = commands.getoutput(cmd)
+        generate = generate.split('\n')
+        partition_replica_assignment = eval(generate[2])
+
+        check_partition_stat()
 
 
