@@ -4,7 +4,7 @@ kafka partition迁移脚本
 usage:
 
 file_test:
->python migration.py mapi mapidescribe
+>python kafka_partition_migrate.py topic_name mapidescribe
 
 online:
->python migration.py mapi
+>python kafka_partition_migrate.py topic_name
