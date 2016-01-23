@@ -123,10 +123,10 @@ def write_json_file(partition_replica_assignment):
 #        f.write(str(partition_replica_assignment))
     execute_cmd = '/usr/local/kafka_2.10-0.8.2.2/bin/kafka-reassign-partitions.sh --zookeeper %s:2181 --reassignment-json-file %s --execute' % (zookeeper_host, json_file_name)
     print execute_cmd
-#    execute_result = commands.getoutput(execute_cmd)
+#    commands.getoutput(execute_cmd)
     time.sleep(5)
     verify_cmd = '/usr/local/kafka_2.10-0.8.2.2/bin/kafka-reassign-partitions.sh --zookeeper %s:2181 --reassignment-json-file %s --verify' % (zookeeper_host, json_file_name)
-#    verify_result = commands.getoutput(verify_cmd)
+#    commands.getoutput(verify_cmd)
     print verify_cmd
 
 
