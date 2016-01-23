@@ -119,8 +119,8 @@ def write_json_file(partition_replica_assignment):
     else:
         sys.exit(2)
     json_file_name = '%s-reassign-file.json' % topic 
-#    with open(reassign-file.json, 'w') as f:
-#        f.write(str(partition_replica_assignment))
+    with open(reassign-file.json, 'w') as f:
+        f.write(str(partition_replica_assignment))
     execute_cmd = '/usr/local/kafka_2.10-0.8.2.2/bin/kafka-reassign-partitions.sh --zookeeper %s:2181 --reassignment-json-file %s --execute' % (zookeeper_host, json_file_name)
     print execute_cmd
 #    commands.getoutput(execute_cmd)
