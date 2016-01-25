@@ -4,7 +4,7 @@
 usage:
 
 file_test:
-`python kafka_partition_migrate.py topic_name mapidescribe`
+>`python kafka_partition_migrate.py topic_name mapidescribe`
 
 online migrate:
-`python kafka_partition_migrate.py topic_name`
+>`python kafka_partition_migrate.py topic_name`
