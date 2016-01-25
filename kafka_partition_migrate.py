@@ -144,7 +144,7 @@ online:
         zookeeper_host = '10.77.121.59'    
         topic = sys.argv[1]
 
-        topic_json_file_name = '/usr/home/yangqi5/topics-to-move-test.json'
+        topic_json_file_name = '/tmp/topics-to-move-test.json'
         topic_json_file_text  = '{    "topics": [        {            "topic": "%s"        }    ],    "version": 1}' % topic 
         with open(topic_json_file_name, 'w') as f:
             f.write(topic_json_file_text)
