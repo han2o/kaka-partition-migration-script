@@ -3,8 +3,8 @@
 
 usage:
 
-file_test:
+_file_test_:
 >`python kafka_partition_migrate.py topic_name mapidescribe`
 
-online migrate:
+_online_ _migrate_:
 >`python kafka_partition_migrate.py topic_name`
