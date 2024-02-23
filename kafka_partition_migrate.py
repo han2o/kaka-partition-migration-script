@@ -134,14 +134,14 @@ if __name__ == "__main__":
     if sys.argv[1] in ['-h', '--help', '-help']:
         print'''usage:
 file_test:
-    python kafka_partition_migrate.py topic_name mapidescribe
+    python kafka_partition_migrate.py topic_name file_name
 online:
     python kafka_partition_migrate.py topic_name
              '''
         sys.exit(2)
     else:
         current_broker_list = raw_input('\nbroker id的参考列表:\n1,6,10,11,12,13,14,15,17\n\n输入存活的broker id:\n')
-        zookeeper_host = '10.77.121.59'    
+        zookeeper_host = '1.2.3.4'    
         topic = sys.argv[1]
 
         topic_json_file_name = '/tmp/topics-to-move-test.json'
